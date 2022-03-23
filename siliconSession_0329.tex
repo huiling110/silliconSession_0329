@@ -123,24 +123,62 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 \end{frame}
 
 \begin{frame}{Machine Setup}
-  \begin{minipage}{0.5\textwidth}
-    \includegraphics[scale=0.3]{plots/PM8_description.png}
-    \hyperlink{https://www.sciencedirect.com/science/article/pii/S0168900219308253}{\beamergotobutton{Array System}}
-  \end{minipage} \hfill
-  \begin{minipage}{0.45\textwidth}
-    \begin{itemize}
-      \item Measurement at room temperature
-      \item \text{Humidity: 40\% - 50\%}
-      \item \text{Voltage up to -850V}
-      \item \text{Voltage provided through the HV pin to the backside}
-    \end{itemize}
-  \end{minipage}
+  \begin{columns}
+    \column{.5\textwidth}
+      \begin{figure}
+          \includegraphics[width=.9\textwidth]{plots/PM8_description.png}
+      \end{figure}
+
+    \column{.5\textwidth}
+        \begin{itemize}
+            % \scriptsize
+            \item Measurement at room temperature
+            \item Humidity: $ 40\% - 50\%$
+            \item Voltage up to \alert{-850V}
+            \item Voltage provided through the HV pin to the backside
+        \end{itemize}
+  \end{columns}
 \end{frame}
+
+\begin{frame}{Sensor List 120 um}
+    \begin{columns}
+      \column{.5\textwidth}
+        \begin{figure}
+            \includegraphics[width=.9\textwidth]{plots/PM8_description.png}
+        \end{figure}
+  
+      \column{.5\textwidth}
+          \begin{itemize}
+              % \scriptsize
+              \item Measurement at room temperature
+              \item Humidity: $ 40\% - 50\%$
+              \item Voltage up to \alert{-850V}
+              \item Voltage provided through the HV pin to the backside
+          \end{itemize}
+    \end{columns}
+  \end{frame}
+
 
 \begin{frame}{Measurement Workflow}
 \end{frame}
     
-
+\begin{frame}{Sensor List 120 um}
+    \begin{table}[htbp] %[h]
+        \centering
+        \footnotesize%Use \footnotesize for a 20% (linear) reduction in font size
+        \setlength\tabcolsep{2pt}%Reduce the amount of intercolumn whitespace
+        \resizebox{0.9\textwidth}{!}{% 
+            \begin{tabular}{|l | c |c|c| c | c |c| |c } 
+             \hline
+             channel              & 1tau1l & 1tau2l & 2tauXL & 1tau1l & 2tau0l \\
+             \hline
+             expectecd signficance& 0.5944 & 0.4261 & 0.1517 & 0.02629& 0.009596 \\
+             \hline
+            \end{tabular}
+        }
+        \caption{Expeceted signficance of all channels}
+        \end{table}    
+\end{frame}
   
 
 \section{IV Results}
