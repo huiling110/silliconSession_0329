@@ -22,7 +22,7 @@
 
 \usepackage{array}
 \usepackage{tabularx} 
-%\usepackage{multirow}
+\usepackage{multirow}
 %\usepackage{longtable}
 %\usepackage{subfigure}not found
 %\usepackage{lipsum}
@@ -114,15 +114,25 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
   % You might wish to add the option [pausesections]
 % \end{frame}
 \section{Introduction}
-
-\begin{frame}{Sensor List: High Density and Low Density}
-    \begin{itemize}
-        \item Compaigns: Fall2021\_PM8, EndOf2021\_PM8, LongtermIV\_ALPS\_2021, Winter2022\_ALPS
-        % \item ss
-    \end{itemize}    
+\begin{frame}{Proto A sensors and their properties}
+  \begin{itemize}
+      % \scriptsize
+      \item 120 um:
+      \begin{itemize} 
+        \item 19 HD Sensors: 5 oxide type B, 8 oxide type C (3 common p-stop), 6 oxide type D
+      \end{itemize}
+      \item 200 um:
+      \begin{itemize} 
+        \item 12 LD Sensors: 2 oxide type A, 3 oxide type B, 5 oxide type C (3 common p-stop), 2 oxide type D
+      \end{itemize}
+      \item 300 um:
+      \begin{itemize} 
+        \item 12 LD Sensors: 2 oxide type A, 3 oxide type B, 4 oxide type C (common p-stop), 5 oxide type D
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 
-\begin{frame}{Machine Setup}
+\begin{frame}{Measurement Setup}
   \begin{columns}
     \column{.5\textwidth}
       \begin{figure}
@@ -140,55 +150,113 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
   \end{columns}
 \end{frame}
 
-\begin{frame}{Sensor List 120 um}
-    \begin{columns}
-      \column{.5\textwidth}
-        \begin{figure}
-            \includegraphics[width=.9\textwidth]{plots/PM8_description.png}
-        \end{figure}
-  
-      \column{.5\textwidth}
-          \begin{itemize}
-              % \scriptsize
-              \item Measurement at room temperature
-              \item Humidity: $ 40\% - 50\%$
-              \item Voltage up to \alert{-850V}
-              \item Voltage provided through the HV pin to the backside
-          \end{itemize}
-    \end{columns}
-  \end{frame}
-
-
-\begin{frame}{Measurement Workflow}
+\begin{frame}{General Remarks}
+  \begin{center}
+    \begin{tabular}{ c c } 
+    \includegraphics[width=.3\textwidth]{plots/Switch_Card.png} & \multirow{2}{3em}{
+      \begin{itemize}
+        % \scriptsize
+        \item Vulnerability to switch card breaks
+        \item No discharges has been observed for proto A sensors
+        \item Test throughput max. 20 per week
+      \end{itemize}
+    } \\ 
+    picture of a discharge &   \\ 
+    \end{tabular}
+    \end{center}
 \end{frame}
-    
-\begin{frame}{Sensor List 120 um}
-    \begin{table}[htbp] %[h]
-        \centering
-        \footnotesize%Use \footnotesize for a 20% (linear) reduction in font size
-        \setlength\tabcolsep{2pt}%Reduce the amount of intercolumn whitespace
-        \resizebox{0.9\textwidth}{!}{% 
-            \begin{tabular}{|l | c |c|c| c | c |c| |c } 
-             \hline
-             channel              & 1tau1l & 1tau2l & 2tauXL & 1tau1l & 2tau0l \\
-             \hline
-             expectecd signficance& 0.5944 & 0.4261 & 0.1517 & 0.02629& 0.009596 \\
-             \hline
-            \end{tabular}
-        }
-        \caption{Expeceted signficance of all channels}
-        \end{table}    
+
+
+
+\begin{frame}{Proto-A: example IV+CV results}
+  \includegraphics[width=.8\textwidth]{plots/IV_CV_example.png}
 \end{frame}
   
 
 \section{IV Results}
 
+\begin{frame}{Proto-A, 120 um, IV results: HPK and CERN (on DF)}
+  \includegraphics[width=.8\textwidth]{plots/IV_CERN_HPK_120um.png}
+\end{frame}
+
+\begin{frame}{Proto-A, 120 um, IV grading comparison}
+  tbd
+\end{frame}
+
+\begin{frame}{Proto-A, 200 um, IV results: HPK and CERN (on DF)}
+  \includegraphics[width=.8\textwidth]{plots/IV_Comparison_SensorsHPK_200um.png}
+\end{frame}
+
+\begin{frame}{Proto-A, 200 um, IV grading comparison}
+  \includegraphics[width=.8\textwidth]{plots/IV_CERN_HPK_200um.png}
+\end{frame}
+
+\begin{frame}{Proto-A, 300 um, IV results: HPK and CERN (on DF)}
+  \includegraphics[width=.8\textwidth]{plots/IV_CERN_HPK_300um.png}
+\end{frame}
+
+\begin{frame}{Proto-A, 300 um, IV grading comparison}
+  \includegraphics[width=.8\textwidth]{plots/IV_grading_300um.png}
+\end{frame}
+
+\begin{frame}{Proto-A Batch 2, 300 um, IV results: HPK and CERN (on DF)}
+  \includegraphics[width=.8\textwidth]{plots/IV_Comparison_SensorsHPK_300um.png}
+\end{frame}
+
+\begin{frame}{Proto-A Batch 2, 300 um, IV grading comparison}
+  \includegraphics[width=.8\textwidth]{plots/IV_grading_300um_2.png}
+\end{frame}
+
+
 \section{CV Results}
 
-\section{Long Term IV}
+\begin{frame}{Proto-A, 120 um, CV results: HPK and CERN (on DF)}
+  tbd
+\end{frame}
+
+\begin{frame}{Proto-A, 120 um, CV grading comparison}
+  tbd
+\end{frame}
+
+\begin{frame}{Proto-A, 200 um, CV results: HPK and CERN (on DF)}
+  \includegraphics[width=.8\textwidth]{plots/CV_ComparisonHPK_200um.png}
+\end{frame}
+
+\begin{frame}{Proto-A, 200 um, CV grading comparison}
+  \includegraphics[width=.7\textwidth]{plots/CV_grading_200um.png}
+\end{frame}
+
+\begin{frame}{Proto-A, 300 um, CV results: HPK and CERN (on DF)}
+  \includegraphics[width=.8\textwidth]{plots/CV_CERN_HPK_300um.png}
+\end{frame}
+
+\begin{frame}{Proto-A, 300 um, CV grading comparison}
+  \includegraphics[width=.7\textwidth]{plots/CV_grading_300um.png}
+\end{frame}
+
+\begin{frame}{Proto-A Batch 2, 300 um, CV results: HPK and CERN (on DF)}
+  \includegraphics[width=.8\textwidth]{plots/CV_ComparisonHPK_300um.png}
+\end{frame}
+
+\begin{frame}{Proto-A, Batch 2, 300 um, CV grading comparison}
+  \includegraphics[width=.7\textwidth]{plots/CV_grading_300um_2.png}
+\end{frame}
 
 
 
+\section{Additional Measurements}
+
+\begin{frame}{Longterm Leakage current stability}
+  \includegraphics[width=.7\textwidth]{plots/Longterm_ranges.png}
+\end{frame}
+
+\begin{frame}{Dicing Frame removal at CERN}
+  \includegraphics[width=.7\textwidth]{plots/Dicing_Frame_Removal.png}
+\end{frame}
+
+\begin{frame}{Summary}
+  tbd
+\end{frame}
 
 \section*{Backup}
 
@@ -200,6 +268,14 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 
 \begin{frame}{List of ProtoA Sensors}
     
+\end{frame}
+
+\begin{frame}{Dicing Frame removal at CERN}
+  \includegraphics[width=.7\textwidth]{plots/DF_removal_Process.png}
+\end{frame}
+
+\begin{frame}{Longterm Leakage current stability}
+  \includegraphics[width=.7\textwidth]{plots/Longterm_process.png}
 \end{frame}
 
 
