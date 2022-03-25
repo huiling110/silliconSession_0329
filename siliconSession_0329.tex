@@ -113,22 +113,44 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
   % You might wish to add the option [pausesections]
 % \end{frame}
 \section{Introduction}
-\begin{frame}{Proto A sensors and their properties}
-  \begin{itemize}
-        \item Have measured \alert{43 sensors} in about 6 months 
-      \item 120 um:
-      \begin{itemize} 
-        \item \alert{19 HD} Sensors: 5 oxide type B, 8 oxide type C (3 common p-stop), 6 oxide type D
-      \end{itemize}
-      \item 200 um:
-      \begin{itemize} 
-        \item \alert{12 LD} Sensors: 2 oxide type A, 3 oxide type B, 5 oxide type C (3 common p-stop), 2 oxide type D
-      \end{itemize}
-      \item 300 um:
-      \begin{itemize} 
-        \item \alert{12 LD} Sensors: 2 oxide type A, 3 oxide type B, 4 oxide type C (common p-stop), 5 oxide type D
-      \end{itemize}
-  \end{itemize}
+\begin{frame}{Proto A sensors measured}
+    \begin{columns}
+        \column{.5\textwidth}
+        \begin{figure}
+            \includegraphics[width=.5\textwidth]{plots/LDsensors.png}\\
+            \includegraphics[width=.5\textwidth]{plots/HDsensors.png}
+        \end{figure}
+
+        \column{.5\textwidth}
+        \begin{tabular}{|c| c| c|}
+            \hline
+            HD\/LD & thickness(um)  & number\\
+            \hline 
+            HD     & 120            & 19    \\
+            \hline 
+            LD     & 200            & 12     \\
+                   & 300            & 30     \\
+            \hline
+        \end{tabular}
+
+
+
+    \end{columns}
+%   \begin{itemize}
+%         \item Have measured \alert{43 sensors} in about 6 months 
+%       \item 120 um:
+%       \begin{itemize} 
+%         \item \alert{19 HD} Sensors: 5 oxide type B, 8 oxide type C (3 common p-stop), 6 oxide type D
+%       \end{itemize}
+%       \item 200 um:
+%       \begin{itemize} 
+%         \item \alert{12 LD} Sensors: 2 oxide type A, 3 oxide type B, 5 oxide type C (3 common p-stop), 2 oxide type D
+%       \end{itemize}
+%       \item 300 um:
+%       \begin{itemize} 
+%         \item \alert{12 LD} Sensors: 2 oxide type A, 3 oxide type B, 4 oxide type C (common p-stop), 5 oxide type D
+%       \end{itemize}
+%   \end{itemize}
 \end{frame}
 
 \begin{frame}{Measurement Setup: PM8 and ALPS}
@@ -183,8 +205,21 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 
 \section{IV Results}
 
+\begin{frame}{IV grading criteria}
+   \begin{itemize}
+       \item Global characteristic
+       \item Per-pad characteristics used to define bad pads if any of the following are met
+   \end{itemize}
+    
+\end{frame}
+
+
 \begin{frame}{Proto-A, 120 um, IV results: HPK and CERN (on DF)}
   \includegraphics[width=.8\textwidth]{plots/IV_CERN_HPK_120um.png}
+\end{frame}
+
+\begin{frame}{Summary for IV results}
+    
 \end{frame}
 
 \begin{frame}{Proto-A, 120 um, IV grading comparison}
