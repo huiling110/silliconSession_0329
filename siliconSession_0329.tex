@@ -189,14 +189,40 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 \end{frame}
 
 \begin{frame}{IV results at CERN }
-    
+   \begin{columns}
+        \column{.45\textwidth}
+        \begin{figure}
+            \includegraphics[width=1.0\textwidth]{plots/HD_totalIV.png}
+            \caption{Total current for HD sensors}
+        \end{figure}
+
+        \column{.55\textwidth}
+        \begin{figure}
+            \includegraphics[width=1.0\textwidth]{plots/failedSensor_HD.png}
+            \caption{One of the failed sensors}
+        \end{figure}
+
+    \end{columns}
+
+    \begin{itemize}
+        \item \alert{16 passed}, \alert{3 failed} for HD sensors
+        \item Failing criteria: $ I800 < 2.5 x I600 $
+        \item Failing reason: one pad has high current readings
+        \item Results of LD in backup
+    \end{itemize}
+
 \end{frame}
 
 
-\begin{frame}{Comparison of IV results between HPK and CERN (on DF): HD}
+\begin{frame}{Comparison of IV results between HPK and CERN(HD)}
   \begin{figure}
-    \includegraphics[width=.8\textwidth]{plots/IV_CERN_HPK_120um.png}
+    \includegraphics[width=.7\textwidth]{plots/IV_CERN_HPK_120um.png}
   \end{figure}
+  \begin{itemize}
+    \scriptsize
+      \item In general, IV Measurement at CERN and that of HPK has \alert{good agreement}
+      \item For \alert{guard ring}, CERN has slightly higher reading than HPK 
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Summary for IV results}
