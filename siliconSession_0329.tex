@@ -113,44 +113,27 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
   % You might wish to add the option [pausesections]
 % \end{frame}
 \section{Introduction}
+
 \begin{frame}{Proto A sensors measured}
+    \begin{itemize}
+        \item Have measured \alert{43 sensors} in about \alert{6 months} 
+        \item 19 high density(HD) sensors(120um) 
+        \item 24 low density(LD) sensors(12 with 200um and 14 with 300 um)
+    \end{itemize}
+
     \begin{columns}
         \column{.5\textwidth}
         \begin{figure}
-            \includegraphics[width=.5\textwidth]{plots/LDsensors.png}\\
-            \includegraphics[width=.5\textwidth]{plots/HDsensors.png}
+            \includegraphics[width=.6\textwidth]{plots/LDsensors.png}
+            \caption{LD sensors}
         \end{figure}
-
         \column{.5\textwidth}
-        \begin{tabular}{|c| c| c|}
-            \hline
-            HD\/LD & thickness(um)  & number\\
-            \hline 
-            HD     & 120            & 19    \\
-            \hline 
-            LD     & 200            & 12     \\
-                   & 300            & 30     \\
-            \hline
-        \end{tabular}
-
-
-
+        \begin{figure}
+            \includegraphics[width=.6\textwidth]{plots/HDsensors.png}
+            \caption{HD sensors}
+        \end{figure}
     \end{columns}
-%   \begin{itemize}
-%         \item Have measured \alert{43 sensors} in about 6 months 
-%       \item 120 um:
-%       \begin{itemize} 
-%         \item \alert{19 HD} Sensors: 5 oxide type B, 8 oxide type C (3 common p-stop), 6 oxide type D
-%       \end{itemize}
-%       \item 200 um:
-%       \begin{itemize} 
-%         \item \alert{12 LD} Sensors: 2 oxide type A, 3 oxide type B, 5 oxide type C (3 common p-stop), 2 oxide type D
-%       \end{itemize}
-%       \item 300 um:
-%       \begin{itemize} 
-%         \item \alert{12 LD} Sensors: 2 oxide type A, 3 oxide type B, 4 oxide type C (common p-stop), 5 oxide type D
-%       \end{itemize}
-%   \end{itemize}
+
 \end{frame}
 
 \begin{frame}{Measurement Setup: PM8 and ALPS}
@@ -168,7 +151,7 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
   \end{columns}
     \begin{itemize}
         \small
-        \item Pre-radiated sensors
+        \item \alert{Pre-radiated} sensors
             \begin{itemize}
                 \scriptsize
                 \item  Room temperaturef; humidity: $ 40\% - 50\%$ ;  voltage up to \alert{-850V}
@@ -179,46 +162,49 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 \end{frame}
 
 
-\begin{frame}{General Remarks}
-  \begin{columns}
-    \column{.5\textwidth}
-      \begin{figure}
-        \includegraphics[width=.7\textwidth]{plots/Switch_Card.png}
-        \caption{picture of a discharge}
-      \end{figure}
-
-    \column{.5\textwidth}
-    \begin{itemize}
-      \small
-      \item Vulnerability to switch card breaks
-      \item No discharges has been observed for proto A sensors
-      \item Test throughput max. 20 per week
-    \end{itemize}
-  \end{columns}
-\end{frame}
 
 
-\begin{frame}{Proto-A: example IV+CV results}
-  \includegraphics[width=.8\textwidth]{plots/IV_CV_example.png}
-\end{frame}
   
 
 \section{IV Results}
 
 \begin{frame}{IV grading criteria}
    \begin{itemize}
-       \item Global characteristic
-       \item Per-pad characteristics used to define bad pads if any of the following are met
+       \item \alert{Per-pad} characteristics (\alert{bad pad} definition)
+            \begin{itemize}
+                \item $ {I}_{600} > 100 nA $
+                \item $ I600 > 10 nA  $  and $ I800 > 2.5 \times I600 $
+                \item $ I600 <= 10 nA $  and $ I800 > 25 nA $
+            \end{itemize}
+       \item \alert{Global} characteristic
+            \begin{itemize}
+                \item I600 (normalised to 20 deg Celsius)$ <= 100 µA $ (integrated over all pads)
+                \item $ I800 < 2.5 x I600 $
+                \item Number of bad pads $ <= 8 $for full-sized sensors
+                \item Allowed number of adjacent bad pads$ <= 2$
+            \end{itemize}
+       \item ChecksCollectionID 1
    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{IV results at CERN }
     
 \end{frame}
 
 
-\begin{frame}{Proto-A, 120 um, IV results: HPK and CERN (on DF)}
-  \includegraphics[width=.8\textwidth]{plots/IV_CERN_HPK_120um.png}
+\begin{frame}{Comparison of IV results between HPK and CERN (on DF): HD}
+  \begin{figure}
+    \includegraphics[width=.8\textwidth]{plots/IV_CERN_HPK_120um.png}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{Summary for IV results}
+    \begin{itemize}
+        \item 24 LD 300 um in Oliwia
+        \item 12 LD 200 um Marta
+        \item HD 120um  Chaochen
+    \end{itemize}
     
 \end{frame}
 
@@ -346,7 +332,30 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 \end{frame}
 
 
+\begin{frame}{General Remarks}
+  \begin{columns}
+    \column{.5\textwidth}
+      \begin{figure}
+        \includegraphics[width=.7\textwidth]{plots/Switch_Card.png}
+        \caption{picture of a discharge}
+      \end{figure}
 
+    \column{.5\textwidth}
+    \begin{itemize}
+      \small
+      \item Vulnerability to switch card breaks
+      \item No discharges has been observed for proto A sensors
+      \item Test throughput max. 20 per week
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Proto-A: example IV+CV results}
+    \begin{figure}
+  \includegraphics[width=.8\textwidth]{plots/IV_CV_example.png}
+        
+    \end{figure}
+\end{frame}
 
 %\begin{frame}
 %\frametitle{Sample frame title}
