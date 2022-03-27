@@ -277,32 +277,71 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
               \item $< +/- 10um $
             \end{itemize}
         \end{itemize}
+        \item ChecksCollectionID 1
   \end{itemize}
 \end{frame}
 
-\begin{frame}{300 um, CV results: HPK and CERN (on DF)}
+\begin{frame}{LD 300 um, CV results: HPK and CERN (on DF)}
     \begin{figure}
-        \includegraphics[width=.9\textwidth]{plots/CV_CERN_HPK_300um_cropped.png}    
+        \includegraphics[width=.9\textwidth]{plots/CV_CERN_HPK_300um.png}    
     \end{figure}
   \href{https://indico.cern.ch/event/1085830/contributions/4565314/attachments/2344490/3998306/IVCV_recent_HGCal_prototype_sensors_Readiness_Review.pdf}{\beamergotobutton{Proto-A, 300 um}}
 \end{frame}
 
+\begin{frame}{HD 120 um, depletion voltage fit fails for some cells}
+  \begin{columns}
+    \column{.5\textwidth}
+    \begin{figure}
+      \includegraphics[width=.55\textwidth]{plots/CV_Fit_just_figures1.png}
+      \caption{Successful fit: most cells}
+    \end{figure}
 
-\begin{frame}{Proto-A, 120 um, depletion voltage fit fails for some cells}
-  \includegraphics[width=.9\textwidth]{plots/CV_Fit.png}
+    \column{.5\textwidth}
+    \begin{figure}
+      \includegraphics[width=.55\textwidth]{plots/CV_Fit_just_figures2.png}
+      \caption{Strange fit: calibration cells and edge cells}
+    \end{figure}
+    \begin{figure}
+      \includegraphics[width=.55\textwidth]{plots/CV_Fit_just_figures3.png}
+      \caption{Failed fit: random cells}
+    \end{figure}
+
+\end{columns}
+
+  \begin{figure}
+    
+  \end{figure}
   \href{https://indico.cern.ch/event/1119831/contributions/4702464/attachments/2378225/4063679/Si\%20sensor\%20meeting.pdf}{\beamergotobutton{Proto-A, 120 um}}
 
 \end{frame}
 
-\begin{frame}{Proto-A, 120 um, failed fits, cell distribution}
-  \includegraphics[width=.9\textwidth]{plots/CV_Fit_Distribution.png}
-\end{frame}
 
 \begin{frame}{Summary for CV results}
+  \begin{table}[htbp] %[h]
+      \centering
+      \footnotesize%Use \footnotesize for a 20% (linear) reduction in font size
+      \setlength\tabcolsep{2pt}%Reduce the amount of intercolumn whitespace
+      \resizebox{0.8\textwidth}{!}{% 
+          \begin{tabular}{|c | c |c|} 
+           \hline
+           sensors  & passed sensors(CERN) & agreement with HPK \\
+
+           \hline
+           HD (120um)  & \alert{13/13 }               & good agreement \\
+           \hline
+           LD (200um)&   \alert{5/5} & good agreement \\
+           \hline
+           LD (300um) &   \alert{14/14} & good agreement \\
+           \hline
+          \end{tabular}
+      }
+      \caption{Summary for all protoA sensors}
+      \end{table}   
+
+
   \begin{itemize}
-      \item CV results are good for all proto-A LD and HD sensors
-      \item CV grading passed before and after Dicing Frame Removal
-      \item Longterm leakage current instability can be observed  for some channels
+      \item \alert{All} sensors have \alert{passed} CV grading      
+      
   \end{itemize}
 \end{frame}
 
@@ -310,26 +349,53 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 
 
 \begin{frame}{Longterm Leakage current stability}
-  \includegraphics[width=.8\textwidth]{plots/RangesForCurrentVariationsDryAir.png}
+  \begin{figure}
+    \includegraphics[width=.9\textwidth]{plots/RangesForCurrentVariationsDryAir.png}
+  \end{figure}
   \href{https://indico.cern.ch/event/1121372/contributions/4708329/attachments/2382634/4071804/Longterm_Leakage_Current_Measurements.pdf}{\beamergotobutton{Longterm Current}}
 \end{frame}
 
 \begin{frame}{Dicing Frame removal at CERN}
-  \includegraphics[width=.7\textwidth]{plots/DF_removal_Process.png}
+  \begin{columns}
+    \column{.5\textwidth}
+    \begin{figure}
+      \includegraphics[width=1.0\textwidth]{plots/DF_removal_Picture.png}
+      \caption{Dicing Frame Removal Process at CERN}
+    \end{figure}
+
+    \column{.55\textwidth}
+    \begin{itemize}
+      \item Process Parameters:
+      \begin{itemize}
+        \item UV illumination
+        \item Temperature: $50  ^oC$
+        \item 600 mbar vacuum
+      \end{itemize}
+      \item Result:
+      \begin{itemize}
+        \item For the 300 um sensors 6 of previously 11 good sensors failed the IV requirements
+        \item 200 um sensors passed the requirements (the experience with Frame Removal improved)
+        \item 120 um sensors were deliver off-DF
+      \end{itemize}
+    \end{itemize}
+
+\end{columns}
+
+\begin{figure}
+\end{figure} 
   \href{https://indico.cern.ch/event/1085830/contributions/4565314/attachments/2344490/3998306/IVCV_recent_HGCal_prototype_sensors_Readiness_Review.pdf}{\beamergotobutton{Dicing Frame (Slide 24)}}
 \end{frame}
 
-\begin{frame}{Dicing Frame removal at CERN}
-  \includegraphics[width=.7\textwidth]{plots/Dicing_Frame_Removal.png}
-\end{frame}
 
 \begin{frame}{Summary}
   \begin{itemize}
     % \scriptsize
+    \item Majority of sensors have good IV results
+    \item CV results are good for all proto-A LD and HD sensors
+    \item Longterm leakage current instability can be observed  for some channels
     \item No discharges has been observed for proto A sensors
-    \item Test throughput 20 sensors per week
-    \item Longterm leakage current instability can be observed for some channels
-    \item Shortage of LCR meters problem resolved
+    % \item Test throughput 20 sensors per week
+    % \item Shortage of LCR meters problem resolved
   \end{itemize}
 \end{frame}
 
@@ -396,6 +462,12 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
   \includegraphics[width=.7\textwidth]{plots/CV_grading_300um_2.png}
 \end{frame}
 
+\begin{frame}{Proto-A, 120 um, failed fits, cell distribution}
+  \begin{figure}
+    \includegraphics[width=.9\textwidth]{plots/CV_Fit_Distribution.png}
+  \end{figure}
+\end{frame}
+
 \begin{frame}{Longterm Leakage current stability, sensors}
   \includegraphics[width=.9\textwidth]{plots/Longterm_sensors.png}
 \end{frame}
@@ -411,8 +483,8 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
     \end{figure}
 \end{frame}
 
-\begin{frame}{Proto-A, 300 um, CV grading (all passed)}
-  \includegraphics[width=.7\textwidth]{plots/CV_grading_300um.png}
+\begin{frame}{Proto-A, 200 um, CV grading (all passed)}
+  \includegraphics[width=.7\textwidth]{plots/CV_grading_200um.png}
 \end{frame}
 %\begin{frame}
 %\frametitle{Sample frame title}
