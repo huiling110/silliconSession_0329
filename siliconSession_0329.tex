@@ -47,7 +47,7 @@
 \usepackage[T1]{fontenc}
 % Or whatever. Note that the encoding and the font should match. If T1
 % does not look nice, try deleting the line with the fontenc.
-
+\usepackage{hyperref}
 
 \title[huilng.hua@cern.ch] % (optional, use only with long paper titles)
 {IV+CV Results for HGCal Proto A Sensors}
@@ -57,9 +57,9 @@
 % {Huiling Hua }
 { Pedro Almeida\and Oliwia Haluszczak\and \textbf{Huiling Hua} \and Lucie Linssen\and Filip Moortgat\and Thorben Quast\and Kourosh Sarbandi\and Sicking\and Eva Sicking\and
 Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
-\logo{
-% \includegraphics[width=1.0cm]{plots/CMS_Logo.png}
-% \includegraphics[width=1.0cm]{plots/CERN_Logo.png}
+\titlegraphic{
+\includegraphics[width=1.0cm]{plots/CMS_Logo.png}
+% \includegraphics[width=1.0cm]{plots}
 }
 
 %\author{Huiling Hua}
@@ -188,7 +188,7 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 
 \end{frame}
 
-\begin{frame}{IV results at CERN }
+\begin{frame}{IV results at CERN(HD) }
    \begin{columns}
         \column{.45\textwidth}
         \begin{figure}
@@ -214,7 +214,7 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 \end{frame}
 
 
-\begin{frame}{Comparison of IV results between HPK and CERN(HD)}
+\begin{frame}{Comparison of IV results between HPK and CERN}
   \begin{figure}
     \includegraphics[width=.7\textwidth]{plots/IV_CERN_HPK_120um.png}
   \end{figure}
@@ -226,40 +226,35 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 \end{frame}
 
 \begin{frame}{Summary for IV results}
+    \begin{table}[htbp] %[h]
+        \centering
+        \footnotesize%Use \footnotesize for a 20% (linear) reduction in font size
+        \setlength\tabcolsep{2pt}%Reduce the amount of intercolumn whitespace
+        \resizebox{0.8\textwidth}{!}{% 
+            \begin{tabular}{|c | c |c|} 
+             \hline
+             sensors  & passed sensors(CERN) & agreement with HPK \\
+
+             \hline
+             HD (120um)  & \alert{16/19 }               & good agreement \\
+             \hline
+             LD (200um)&   \alert{12/12} & good agreement \\
+             \hline
+             HD (300um) &   \alert{14/14} & good agreement \\
+             \hline
+            \end{tabular}
+        }
+        \caption{Summary for all protoA sensors}
+        \end{table}   
+
+
     \begin{itemize}
-        \item 14 LD 300 um in Oliwia
-        \item 12 LD 200 um Marta
-        \item HD 120um  Chaochen
+        \item \alert{Marjority} of sensors have \alert{good IV} results
+        \item The few failed sensors  invetigated
+        % \item  \href{https://indico.cern.ch/event/1119831/contributions/4702464/attachments/2378225/4063679/Si%20sensor%20meeting.pdf}{links}
+        
+        
     \end{itemize}
-    
-\end{frame}
-
-\begin{frame}{Proto-A, 120 um, IV grading comparison}
-  tbd
-\end{frame}
-
-\begin{frame}{Proto-A, 200 um, IV results: HPK and CERN (on DF)}
-  \includegraphics[width=.8\textwidth]{plots/IV_Comparison_SensorsHPK_200um.png}
-\end{frame}
-
-\begin{frame}{Proto-A, 200 um, IV grading comparison}
-  \includegraphics[width=.8\textwidth]{plots/IV_CERN_HPK_200um.png}
-\end{frame}
-
-\begin{frame}{Proto-A, 300 um, IV results: HPK and CERN (on DF)}
-  \includegraphics[width=.8\textwidth]{plots/IV_CERN_HPK_300um.png}
-\end{frame}
-
-\begin{frame}{Proto-A, 300 um, IV grading comparison}
-  \includegraphics[width=.8\textwidth]{plots/IV_grading_300um.png}
-\end{frame}
-
-\begin{frame}{Proto-A Batch 2, 300 um, IV results: HPK and CERN (on DF)}
-  \includegraphics[width=.8\textwidth]{plots/IV_Comparison_SensorsHPK_300um.png}
-\end{frame}
-
-\begin{frame}{Proto-A Batch 2, 300 um, IV grading comparison}
-  \includegraphics[width=.8\textwidth]{plots/IV_grading_300um_2.png}
 \end{frame}
 
 
