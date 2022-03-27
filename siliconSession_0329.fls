@@ -383,13 +383,15 @@ INPUT /home/marta/Documents/silliconSession_0329/plots/CV_ComparisonHPK_200um.pn
 INPUT /home/marta/Documents/silliconSession_0329/plots/CV_grading_200um.png
 INPUT /home/marta/Documents/silliconSession_0329/plots/CV_Fit.png
 INPUT /home/marta/Documents/silliconSession_0329/plots/CV_Fit_Distribution.png
-INPUT /home/marta/Documents/silliconSession_0329/plots/Longterm_ranges.png
+INPUT /home/marta/Documents/silliconSession_0329/plots/RangesForCurrentVariationsDryAir.png
 INPUT /home/marta/Documents/silliconSession_0329/plots/DF_removal_Process.png
 INPUT /home/marta/Documents/silliconSession_0329/plots/Dicing_Frame_Removal.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
 INPUT /home/marta/Documents/silliconSession_0329/plots/PM8_sensorList.png
 INPUT /home/marta/Documents/silliconSession_0329/plots/winter2022_sensorList.png
 INPUT /home/marta/Documents/silliconSession_0329/plots/Fall_2021_sensorList.png
+INPUT /home/marta/Documents/silliconSession_0329/plots/CV_ComparisonHPKCERN_120um.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
 INPUT /home/marta/Documents/silliconSession_0329/plots/CV_CERN_HPK_300um.png
 INPUT /home/marta/Documents/silliconSession_0329/plots/CV_grading_300um.png
 INPUT /home/marta/Documents/silliconSession_0329/plots/CV_ComparisonHPK_300um.png

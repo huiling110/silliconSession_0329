@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.10.27)  27 MAR 2022 01:38
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.10.27)  27 MAR 2022 17:15
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -888,8 +888,8 @@ No file siliconSession_0329.toc.
 [24
 
 ]
-File: plots/Longterm_ranges.png Graphic file (type bmp)
-<plots/Longterm_ranges.png>
+File: plots/RangesForCurrentVariationsDryAir.png Graphic file (type bmp)
+<plots/RangesForCurrentVariationsDryAir.png>
  [25
 
 ]
@@ -910,7 +910,7 @@ File: plots/Dicing_Frame_Removal.png Graphic file (type bmp)
 File: plots/PM8_sensorList.png Graphic file (type bmp)
 <plots/PM8_sensorList.png>
 
-Overfull \vbox (13.08972pt too high) detected at line 328
+Overfull \vbox (13.08972pt too high) detected at line 329
  []
 
 [30
@@ -924,7 +924,7 @@ File: plots/winter2022_sensorList.png Graphic file (type bmp)
 File: plots/Fall_2021_sensorList.png Graphic file (type bmp)
 <plots/Fall_2021_sensorList.png>
 
-Overfull \vbox (2.18443pt too high) detected at line 340
+Overfull \vbox (2.18443pt too high) detected at line 341
  []
 
 [32
@@ -932,39 +932,48 @@ Overfull \vbox (2.18443pt too high) detected at line 340
 ] [33
 
 ]
+File: plots/CV_ComparisonHPKCERN_120um.png Graphic file (type bmp)
+<plots/CV_ComparisonHPKCERN_120um.png>
+
+Overfull \vbox (18.3357pt too high) detected at line 358
+ []
+
+[34
+
+]
 File: plots/CV_CERN_HPK_300um.png Graphic file (type bmp)
 <plots/CV_CERN_HPK_300um.png>
- [34
+ [35
 
 ]
 File: plots/CV_grading_300um.png Graphic file (type bmp)
 <plots/CV_grading_300um.png>
- [35
+ [36
 
 ]
 File: plots/CV_ComparisonHPK_300um.png Graphic file (type bmp)
 <plots/CV_ComparisonHPK_300um.png>
- [36
+ [37
 
 ]
 File: plots/CV_grading_300um_2.png Graphic file (type bmp)
 <plots/CV_grading_300um_2.png>
- [37
+ [38
 
 ]
 File: plots/Longterm_sensors.png Graphic file (type bmp)
 <plots/Longterm_sensors.png>
- [38
+ [39
 
 ]
 File: plots/Longterm_process.png Graphic file (type bmp)
 <plots/Longterm_process.png>
- [39
+ [40
 
 ]
 File: plots/IV_CV_example.png Graphic file (type bmp)
 <plots/IV_CV_example.png>
- [40
+ [41
 
 ]
 \tf@nav=\write6
@@ -981,11 +990,11 @@ File: plots/IV_CV_example.png Graphic file (type bmp)
 Package caption Warning: Unused \captionsetup[sub] on input line 33.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 459.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 459.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 472.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 472.
 (/home/marta/Documents/silliconSession_0329/siliconSession_0329.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 459.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 459.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 472.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 472.
 
 
 Package rerunfilecheck Warning: File `siliconSession_0329.out' has changed.
@@ -997,12 +1006,12 @@ Package rerunfilecheck Info: Checksums for `siliconSession_0329.out':
 (rerunfilecheck)             After:  0E7A065F115B80EFD889F3F357E66C70;245.
  ) 
 Here is how much of TeX's memory you used:
- 23479 strings out of 479819
- 428522 string characters out of 5895845
- 678484 words of memory out of 5000000
- 40074 multiletter control sequences out of 15000+600000
- 573422 words of font info for 81 fonts, out of 8000000 for 9000
+ 23501 strings out of 479819
+ 429239 string characters out of 5895845
+ 678485 words of memory out of 5000000
+ 40095 multiletter control sequences out of 15000+600000
+ 575158 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  58i,15n,67p,829b,743s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /home/marta/Documents/silliconSession_0329/siliconSession_0329.xdv (40 pages, 1023328 bytes).
+Output written on /home/marta/Documents/silliconSession_0329/siliconSession_0329.xdv (41 pages, 1050440 bytes).
