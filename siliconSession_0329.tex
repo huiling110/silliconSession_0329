@@ -15,7 +15,6 @@
 
 
 %   \usecolortheme{wolverine}
-
   \setbeamercovered{transparent}
   % or whatever (possibly just delete it)
 }
@@ -35,6 +34,7 @@
 % \usepackage{ulem}
 \usepackage{soul}
 %\usepackage{grffile}
+\usepackage{hyperref}
 
 
 \usepackage[english]{babel}
@@ -99,8 +99,6 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
     \tableofcontents[currentsection]
   \end{frame}
 }
-
-
 
 \begin{document}
 
@@ -260,44 +258,66 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 
 \section{CV Results}
 
-\begin{frame}{Proto-A, 120 um, CV results: HPK and CERN (on DF)}
-  tbd
-\end{frame}
-
-\begin{frame}{Proto-A, 120 um, CV grading comparison}
-  tbd
-\end{frame}
-
-\begin{frame}{Proto-A, 200 um, CV results: HPK and CERN (on DF)}
-  \includegraphics[width=.8\textwidth]{plots/CV_ComparisonHPK_200um.png}
-\end{frame}
-
-\begin{frame}{Proto-A, 200 um, CV grading comparison}
-  \includegraphics[width=.7\textwidth]{plots/CV_grading_200um.png}
+\begin{frame}{CV grading criteria}
+  \begin{itemize}
+      \item \alert{Global} characteristic from full hexagonal pads only
+        \begin{itemize}
+          \item Depletion voltage $ median(V_{dep}) $:
+            \begin{itemize}
+             \item $ < 370 V $ for thickness 300 um
+             \item $ < 160 V $ for thickness 200 um
+             \item $ < 70 V $ for thickness 120 um  
+            \end{itemize}
+          \item Depletion voltage uniformity ($ IQR_{68\%}(V_{dep}) $):
+            \begin{itemize}
+              \item $< 0.1 * median(V_{dep})$
+            \end{itemize}
+          \item Thickness uniformity ${\Delta} thickness$:
+            \begin{itemize}
+              \item $< +/- 10um $
+            \end{itemize}
+        \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Proto-A, 300 um, CV results: HPK and CERN (on DF)}
-  \includegraphics[width=.8\textwidth]{plots/CV_CERN_HPK_300um.png}
+  \includegraphics[width=.9\textwidth]{plots/CV_CERN_HPK_300um_cropped.png}
+  \href{https://indico.cern.ch/event/1085830/contributions/4565314/attachments/2344490/3998306/IVCV_recent_HGCal_prototype_sensors_Readiness_Review.pdf}{\beamergotobutton{Proto-A, 300 um}}
 \end{frame}
 
-\begin{frame}{Proto-A, 300 um, CV grading comparison}
+\begin{frame}{Proto-A, 300 um, CV grading (all passed)}
   \includegraphics[width=.7\textwidth]{plots/CV_grading_300um.png}
 \end{frame}
 
-\begin{frame}{Proto-A Batch 2, 300 um, CV results: HPK and CERN (on DF)}
-  \includegraphics[width=.8\textwidth]{plots/CV_ComparisonHPK_300um.png}
+\begin{frame}{Proto-A, 120 um, depletion voltage fit fails for some cells}
+  \includegraphics[width=.9\textwidth]{plots/CV_Fit.png}
+  \href{https://indico.cern.ch/event/1119831/contributions/4702464/attachments/2378225/4063679/Si\%20sensor\%20meeting.pdf}{\beamergotobutton{Proto-A, 120 um}}
+
 \end{frame}
 
-\begin{frame}{Proto-A, Batch 2, 300 um, CV grading comparison}
-  \includegraphics[width=.7\textwidth]{plots/CV_grading_300um_2.png}
+\begin{frame}{Proto-A, 120 um, failed fits, cell distribution}
+  \includegraphics[width=.9\textwidth]{plots/CV_Fit_Distribution.png}
 \end{frame}
 
-
+\begin{frame}{Summary for CV results}
+  \begin{itemize}
+      \item CV results are good for all proto-A LD and HD sensors
+      \item CV grading passed before and after Dicing Frame Removal
+      \item Longterm leakage current instability can be observed  for some channels
+  \end{itemize}
+\end{frame}
 
 \section{Additional Measurements}
 
+
 \begin{frame}{Longterm Leakage current stability}
-  \includegraphics[width=.7\textwidth]{plots/Longterm_ranges.png}
+  \includegraphics[width=.8\textwidth]{plots/RangesForCurrentVariationsDryAir.png}
+  \href{https://indico.cern.ch/event/1121372/contributions/4708329/attachments/2382634/4071804/Longterm_Leakage_Current_Measurements.pdf}{\beamergotobutton{Longterm Current}}
+\end{frame}
+
+\begin{frame}{Dicing Frame removal at CERN}
+  \includegraphics[width=.7\textwidth]{plots/DF_removal_Process.png}
+  \href{https://indico.cern.ch/event/1085830/contributions/4565314/attachments/2344490/3998306/IVCV_recent_HGCal_prototype_sensors_Readiness_Review.pdf}{\beamergotobutton{Dicing Frame (Slide 24)}}
 \end{frame}
 
 \begin{frame}{Dicing Frame removal at CERN}
@@ -307,9 +327,10 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 \begin{frame}{Summary}
   \begin{itemize}
     % \scriptsize
-    \item Vulnerability to switch card breaks
     \item No discharges has been observed for proto A sensors
-    \item Test throughput max. 20 per week
+    \item Test throughput 20 sensors per week
+    \item Longterm leakage current instability can be observed for some channels
+    \item Shortage of LCR meters problem resolved
   \end{itemize}
 \end{frame}
 
@@ -344,31 +365,44 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
     
 \end{frame}
 
-\begin{frame}{Dicing Frame removal at CERN}
-  \includegraphics[width=.7\textwidth]{plots/DF_removal_Process.png}
+\begin{frame}{Proto-A, 120 um, CV results: HPK and CERN}
+  \includegraphics[width=.8\textwidth]{plots/CV_ComparisonHPKCERN_120um.png}
+  \begin{block}{}
+    \begin{itemize}
+      % \scriptsize
+      \item Hamamatsu results are outside the treshhold. CERN results are good.
+      \item Hamamatsu measures one diode, while CERN measures all channels.
+      \item Hamamatsu measures on Dicing Frame, which CERN off Dicing Frame.
+    \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}{Proto-A, 200 um, CV results: HPK and CERN (on DF)}
+  \includegraphics[width=.9\textwidth]{plots/CV_ComparisonHPK_200um.png}
+  \href{https://indico.cern.ch/event/1132823/contributions/4755812/attachments/2399581/4103704/LD\%20proto-A\%20sensors\%20200\%20um\%2C\%20ALPS\%20Winter\%202022.pdf}{\beamergotobutton{Proto-A, 200 um}}
+\end{frame}
+
+\begin{frame}{Proto-A, 300 um, CV results: HPK and CERN (on DF)}
+  \includegraphics[width=.8\textwidth]{plots/CV_CERN_HPK_300um.png}
+\end{frame}
+
+\begin{frame}{Proto-A, 300 um, CV grading comparison}
+  \includegraphics[width=.7\textwidth]{plots/CV_grading_300um.png}
+\end{frame}
+
+\begin{frame}{Proto-A Batch 2, 300 um, CV results: HPK and CERN (on DF)}
+  \includegraphics[width=.8\textwidth]{plots/CV_ComparisonHPK_300um.png}
+\end{frame}
+
+\begin{frame}{Proto-A, Batch 2, 300 um, CV grading comparison}
+  \includegraphics[width=.7\textwidth]{plots/CV_grading_300um_2.png}
+\end{frame}
+
+\begin{frame}{Longterm Leakage current stability, sensors}
+  \includegraphics[width=.9\textwidth]{plots/Longterm_sensors.png}
 \end{frame}
 
 \begin{frame}{Longterm Leakage current stability}
   \includegraphics[width=.7\textwidth]{plots/Longterm_process.png}
-\end{frame}
-
-
-\begin{frame}{General Remarks}
-  \begin{columns}
-    \column{.5\textwidth}
-      \begin{figure}
-        \includegraphics[width=.7\textwidth]{plots/Switch_Card.png}
-        \caption{picture of a discharge}
-      \end{figure}
-
-    \column{.5\textwidth}
-    \begin{itemize}
-      \small
-      \item Vulnerability to switch card breaks
-      \item No discharges has been observed for proto A sensors
-      \item Test throughput max. 20 per week
-    \end{itemize}
-  \end{columns}
 \end{frame}
 
 \begin{frame}{Proto-A: example IV+CV results}
