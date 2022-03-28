@@ -16,6 +16,7 @@
 
 %   \usecolortheme{wolverine}
   \setbeamercovered{transparent}
+   \setbeamerfont{caption}{size=\small}
   % or whatever (possibly just delete it)
 }
 
@@ -48,8 +49,9 @@
 % Or whatever. Note that the encoding and the font should match. If T1
 % does not look nice, try deleting the line with the fontenc.
 \usepackage{hyperref}
+\beamertemplatenavigationsymbolsempty
 
-\title[huilng.hua@cern.ch] % (optional, use only with long paper titles)
+\title[Proto-A Sensors] % (optional, use only with long paper titles)
 {IV+CV Results for HGCal Proto A Sensors}
 %\subtitle
 %{Include Only If Paper Has a Subtitle}
@@ -57,9 +59,13 @@
 % {Huiling Hua }
 { Pedro Almeida\and Oliwia Haluszczak\and \textbf{Huiling Hua} \and Lucie Linssen\and Filip Moortgat\and Thorben Quast\and Kourosh Sarbandi\and Sicking\and Eva Sicking\and
 Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
-\titlegraphic{
-\includegraphics[width=1.0cm]{plots/CMS_Logo.png}
-% \includegraphics[width=1.0cm]{plots}
+% \titlegraphic{
+% \includegraphics[width=1.0cm]{plots/CMS_Logo.png}
+% % \includegraphics[width=1.0cm]{plots}
+% }
+\logo{
+  \includegraphics[width=0.7cm]{plots/CMS_Logo.png}
+  \includegraphics[width=0.7cm]{plots/CERN_Logo.png}
 }
 
 %\author{Huiling Hua}
@@ -283,35 +289,57 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 
 \begin{frame}{LD 300 um, CV results: HPK and CERN (on DF)}
     \begin{figure}
-        \includegraphics[width=.9\textwidth]{plots/CV_CERN_HPK_300um.png}    
+        \includegraphics[width=.9\textwidth]{plots/CV_ComparisonHPKCERN_300um_All.png}    
     \end{figure}
   \href{https://indico.cern.ch/event/1085830/contributions/4565314/attachments/2344490/3998306/IVCV_recent_HGCal_prototype_sensors_Readiness_Review.pdf}{\beamergotobutton{Proto-A, 300 um}}
 \end{frame}
+
+% \begin{frame}{HD 120 um, depletion voltage fit fails for some cells}
+%   \begin{columns}
+%     \column{.5\textwidth}
+%     \begin{figure}
+%       \includegraphics[width=.55\textwidth]{plots/CV_Fit_just_figures1.png}
+%       %\caption{Successful fit: most cells}
+%     \end{figure}
+%     \column{.5\textwidth}
+%     \begin{figure}
+%       \includegraphics[width=.55\textwidth]{plots/CV_Fit_just_figures2.png}
+%       \caption{Strange fit: calibration cells and edge cells}
+%     \end{figure}
+%     \begin{figure}
+%       \includegraphics[width=.55\textwidth]{plots/CV_Fit_just_figures3.png}
+%       \caption{Failed fit: random cells}
+%     \end{figure}
+
+% \end{columns}
+
+%   \begin{figure}
+    
+%   \end{figure}
+%   \href{https://indico.cern.ch/event/1119831/contributions/4702464/attachments/2378225/4063679/Si\%20sensor\%20meeting.pdf}{\beamergotobutton{Proto-A, 120 um}}
+
+% \end{frame}
 
 \begin{frame}{HD 120 um, depletion voltage fit fails for some cells}
   \begin{columns}
     \column{.5\textwidth}
     \begin{figure}
       \includegraphics[width=.55\textwidth]{plots/CV_Fit_just_figures1.png}
-      \caption{Successful fit: most cells}
-    \end{figure}
-
-    \column{.5\textwidth}
-    \begin{figure}
       \includegraphics[width=.55\textwidth]{plots/CV_Fit_just_figures2.png}
-      \caption{Strange fit: calibration cells and edge cells}
-    \end{figure}
-    \begin{figure}
       \includegraphics[width=.55\textwidth]{plots/CV_Fit_just_figures3.png}
-      \caption{Failed fit: random cells}
+      %\caption{Successful fit: most cells}
     \end{figure}
+    \column{.5\textwidth}
+
+    \begin{itemize}
+      \item Successful fit: for most cells of the sensors
+      \item Strange fit: calibration cells and edge cells, same cells for all the sensors
+      \item Failed fit: random cells for the sensors
+    \end{itemize}
+    \href{https://indico.cern.ch/event/1119831/contributions/4702464/attachments/2378225/4063679/Si\%20sensor\%20meeting.pdf}{\beamergotobutton{Proto-A, 120 um}}
+
 
 \end{columns}
-
-  \begin{figure}
-    
-  \end{figure}
-  \href{https://indico.cern.ch/event/1119831/contributions/4702464/attachments/2378225/4063679/Si\%20sensor\%20meeting.pdf}{\beamergotobutton{Proto-A, 120 um}}
 
 \end{frame}
 
@@ -350,7 +378,7 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 
 \begin{frame}{Longterm Leakage current stability}
   \begin{figure}
-    \includegraphics[width=.9\textwidth]{plots/RangesForCurrentVariationsDryAir.png}
+    \includegraphics[width=.8\textwidth]{plots/RangesForCurrentVariationsDryAir.png}
   \end{figure}
   \href{https://indico.cern.ch/event/1121372/contributions/4708329/attachments/2382634/4071804/Longterm_Leakage_Current_Measurements.pdf}{\beamergotobutton{Longterm Current}}
 \end{frame}
@@ -374,8 +402,7 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
       \item Result:
       \begin{itemize}
         \item For the 300 um sensors 6 of previously 11 good sensors failed the IV requirements
-        \item 200 um sensors passed the requirements (the experience with Frame Removal improved)
-        \item 120 um sensors were deliver off-DF
+        \item 120 um and 200 um sensors were delivered off-DF
       \end{itemize}
     \end{itemize}
 
