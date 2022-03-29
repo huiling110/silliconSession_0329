@@ -58,7 +58,7 @@
 %{Include Only If Paper Has a Subtitle}
 \author[Huiling Hua, Marta Krawczyk] % (optional, for multiple authors)
 % {Huiling Hua }
-{ Pedro Almeida\and Oliwia Haluszczak\and \textbf{Huiling Hua} \and Lucie Linssen\and Filip Moortgat\and Thorben Quast\and Kourosh Sarbandi\and Sicking\and Eva Sicking\and
+{ Pedro Almeida\and Oliwia Haluszczak\and \textbf{Huiling Hua} \and Lucie Linssen\and Filip Moortgat\and Thorben Quast\and Kourosh Sarbandi\and Eva Sicking\and
 Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 % \titlegraphic{
 % \includegraphics[width=1.0cm]{plots/CMS_Logo.png}
@@ -114,15 +114,15 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
   \titlepage
 \end{frame}
 
-% \begin{frame}{Outline}
-%   \tableofcontents
-  % You might wish to add the option [pausesections]
-% \end{frame}
+\begin{frame}{Outline}
+  \tableofcontents
+  %You might wish to add the option [pausesections]
+\end{frame}
 \section{Introduction}
 
 \begin{frame}{Proto A sensors measured}
     \begin{itemize}
-        \item Have measured \alert{43 sensors} in about \alert{6 months} 
+        \item Have measured \alert{43 sensors}
         \item 19 high density(HD) sensors(120um) 
         \item 26 low density(LD) sensors(12 with 200um and 14 with 300 um)
     \end{itemize}
@@ -160,10 +160,9 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
         \item \alert{Pre-radiated} sensors
             \begin{itemize}
                 \scriptsize
-                \item  Room temperaturef; humidity: $ 40\% - 50\%$ ;  voltage up to \alert{-850V}
-                \item Voltage provided through the HV pin to the backside
+                \item  Room temperature; humidity: $ 40\% - 50\%$ ;  voltage up to \alert{-850V}
+                \item Voltage provided through the HV pin to the frontside
             \end{itemize}
-        \item LD sensor measured at ALPS; HD at PM8
     \end{itemize}
 \end{frame}
 
@@ -189,7 +188,6 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
                 \item Number of bad pads $ <= 8 $for full-sized sensors
                 \item Allowed number of adjacent bad pads$ <= 2$
             \end{itemize}
-       \item ChecksCollectionID 1
    \end{itemize}
 
 \end{frame}
@@ -199,12 +197,12 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
         \column{.45\textwidth}
         \begin{figure}
             \includegraphics[width=1.0\textwidth]{plots/HD_totalIV.png}
-            \caption{Total current for HD sensors}
+            \caption{Total current of all 19 HD sensors}
         \end{figure}
 
         \column{.55\textwidth}
         \begin{figure}
-            \includegraphics[width=1.0\textwidth]{plots/failedSensor_HD.png}
+            \includegraphics[width=0.6\textwidth]{plots/IV_Failed.png}
             \caption{One of the failed sensors}
         \end{figure}
 
@@ -212,11 +210,10 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 
     \begin{itemize}
         \item \alert{16 passed}, \alert{3 failed} for HD sensors
-        \item Failing criteria: $ I800 < 2.5 x I600 $
+        \item Failing criteria:  $I_\text{800V, total} < 2.5 \times I_\text{600V, total}$
         \item Failing reason: one pad has high current readings
         \item Results of LD in backup
     \end{itemize}
-
 \end{frame}
 
 
@@ -237,16 +234,16 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
         \footnotesize%Use \footnotesize for a 20% (linear) reduction in font size
         \setlength\tabcolsep{2pt}%Reduce the amount of intercolumn whitespace
         \resizebox{0.8\textwidth}{!}{% 
-            \begin{tabular}{|c | c |c|} 
+            \begin{tabular}{|c | c |c|c|} 
              \hline
-             sensors  & passed sensors(CERN) & agreement with HPK \\
+             sensors  & passed sensors(CERN) & agreement with HPK & Source\\
 
              \hline
-             HD (120um)  & \alert{16/19 }               & good agreement \\
+             HD (120um)  & \alert{16/19 } &  good agreement    &   \href{https://indico.cern.ch/event/1119831/contributions/4702464/attachments/2378225/4063679/Si\%20sensor\%20meeting.pdf}{\beamergotobutton{Link}} \\
              \hline
-             LD (200um)&   \alert{12/12} & good agreement \\
+             LD (200um)&   \alert{12/12} & good agreement  &   \href{https://indico.cern.ch/event/1132823/contributions/4755812/attachments/2399581/4103704/LD\%20proto-A\%20sensors\%20200\%20um\%2C\%20ALPS\%20Winter\%202022.pdf}{\beamergotobutton{Link}} \\
              \hline
-             LD (300um) &   \alert{14/14} & good agreement \\
+             LD (300um) &   \alert{14/14} & good agreement &   \href{https://indico.cern.ch/event/1085830/contributions/4565314/attachments/2344490/3998306/IVCV_recent_HGCal_prototype_sensors_Readiness_Review.pdf}{\beamergotobutton{Link}} \\
              \hline
             \end{tabular}
         }
@@ -255,8 +252,8 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 
 
     \begin{itemize}
-        \item \alert{Marjority} of sensors have \alert{good IV} results
-        \item The few failed sensors  invetigated
+        \item \alert{Majority} of sensors have \alert{good IV} results
+        \item The reasons for failure were investigated
         % \item  \href{https://indico.cern.ch/event/1119831/contributions/4702464/attachments/2378225/4063679/Si%20sensor%20meeting.pdf}{links}
         
         
@@ -295,7 +292,6 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
               \item $< +/- 10um $
             \end{itemize}
         \end{itemize}
-        \item ChecksCollectionID 1
   \end{itemize}
 \end{frame}
 
@@ -362,16 +358,16 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
       \footnotesize%Use \footnotesize for a 20% (linear) reduction in font size
       \setlength\tabcolsep{2pt}%Reduce the amount of intercolumn whitespace
       \resizebox{0.8\textwidth}{!}{% 
-          \begin{tabular}{|c | c |c|} 
+          \begin{tabular}{|c | c |c|c|} 
            \hline
            sensors  & passed sensors(CERN) & agreement with HPK \\
 
            \hline
-           HD (120um)  & \alert{13/13 }               & good agreement \\
+           HD (120um)  & \alert{13/13 }               & good agreement &   \href{https://indico.cern.ch/event/1119831/contributions/4702464/attachments/2378225/4063679/Si\%20sensor\%20meeting.pdf}{\beamergotobutton{Link}} \\
            \hline
-           LD (200um)&   \alert{5/5} & good agreement \\
+           LD (200um)&   \alert{5/5} & good agreement &   \href{https://indico.cern.ch/event/1132823/contributions/4755812/attachments/2399581/4103704/LD\%20proto-A\%20sensors\%20200\%20um\%2C\%20ALPS\%20Winter\%202022.pdf}{\beamergotobutton{Link}} \\
            \hline
-           LD (300um) &   \alert{14/14} & good agreement \\
+           LD (300um) &   \alert{14/14} & good agreement &   \href{https://indico.cern.ch/event/1085830/contributions/4565314/attachments/2344490/3998306/IVCV_recent_HGCal_prototype_sensors_Readiness_Review.pdf}{\beamergotobutton{Link}} \\
            \hline
           \end{tabular}
       }
@@ -443,7 +439,7 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
 \begin{frame}{Backup}
 	\center
 	\huge
-	backup
+	Backup slides
 \end{frame}
 
 \begin{frame}{Sensor list: HD}
@@ -452,22 +448,13 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
    \end{figure} 
 \end{frame}
 
-\begin{frame}{Sensor list}
-   \begin{figure}
-       \includegraphics[width=.8\textwidth]{plots/winter2022_sensorList.png}
-   \end{figure} 
-\end{frame}
 
-\begin{frame}{Sensor list}
+\begin{frame}{Sensor list: LD}
    \begin{figure}
        \includegraphics[width=.8\textwidth]{plots/Fall_2021_sensorList.png}
    \end{figure} 
 \end{frame}
 
-
-\begin{frame}{List of ProtoA Sensors}
-    
-\end{frame}
 
 \begin{frame}{Proto-A, 120 um, CV results: HPK and CERN}
   \includegraphics[width=.8\textwidth]{plots/CV_ComparisonHPKCERN_120um.png}
@@ -485,8 +472,8 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
   \href{https://indico.cern.ch/event/1132823/contributions/4755812/attachments/2399581/4103704/LD\%20proto-A\%20sensors\%20200\%20um\%2C\%20ALPS\%20Winter\%202022.pdf}{\beamergotobutton{Proto-A, 200 um}}
 \end{frame}
 
-\begin{frame}{Proto-A, 300 um, CV results: HPK and CERN (on DF)}
-  \includegraphics[width=.8\textwidth]{plots/CV_CERN_HPK_300um.png}
+\begin{frame}{Proto-A, 200 um, CV grading (all passed)}
+  \includegraphics[width=.7\textwidth]{plots/CV_grading_200um.png}
 \end{frame}
 
 \begin{frame}{Proto-A, 300 um, CV grading comparison}
@@ -522,9 +509,7 @@ Chaochen Yuan\and Philipp Zehetner\and \textbf{Marta Krawczyk} }
     \end{figure}
 \end{frame}
 
-\begin{frame}{Proto-A, 200 um, CV grading (all passed)}
-  \includegraphics[width=.7\textwidth]{plots/CV_grading_200um.png}
-\end{frame}
+
 %\begin{frame}
 %\frametitle{Sample frame title}
 %
